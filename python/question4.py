@@ -5,10 +5,14 @@
 # Note - Write code comments wherever needed for code understanding.
 
 # Excepted Output Data Attributes
-# ● Name of Earth Meteorite - string id - ID of Earth
-# ● Meteorite - int nametype - string recclass - string
-# ● mass - Mass of Earth Meteorite - float year - Year at which Earth
-# ● Meteorite was hit - datetime format reclat - float recclong - float
+# ● Name of Earth Meteorite - string 
+# ● id - ID of Earth Meteorite - int 
+# ● nametype - string 
+# ● recclass - string
+# ● mass - Mass of Earth Meteorite - float 
+# ● year - Year at which Earth Meteorite was hit - datetime format
+# ● reclat - float 
+# ● recclong - float
 # ● point coordinates - list of int
 
 
@@ -33,6 +37,7 @@ def process_data(data):
     years = []
     reclats = []
     reclongs = []
+    coordinates = []
 
     # Iterate over each meteorite in the data and extract the attributes
     for meteorite in data:
@@ -44,6 +49,10 @@ def process_data(data):
         years.append(meteorite.get('year', None))
         reclats.append(meteorite.get('reclat', None))
         reclongs.append(meteorite.get('reclong', None))
+        if meteorite.get('geolocation', None) is not None:    
+            coordinates.append(meteorite['geolocation'].get('coordinates', None))
+        else:
+            coordinates.append(None)
 
     # Create a dictionary of the extracted attributes
     data_dict = {
@@ -54,7 +63,8 @@ def process_data(data):
         'mass': masses,
         'year': years,
         'reclat': reclats,
-        'reclong': reclongs
+        'reclong': reclongs,
+        'coordinates': coordinates,
     }
 
     # Create a pandas DataFrame from the dictionary
