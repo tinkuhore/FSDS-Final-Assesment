@@ -33,13 +33,13 @@ import pandas as pd
 import requests
 
 # Function to download the data from the provided link
-def download_data(url):
+def download_data(url)-> dict:
     response = requests.get(url)
     data = response.json()
     return data
 
 # Function to process the data and convert it into a properly structured dataframe
-def process_data(data):
+def process_data(data)->pd.DataFrame:
     # Extract the 'pokemon' field from the data
     pokemon_data = data['pokemon']
 
