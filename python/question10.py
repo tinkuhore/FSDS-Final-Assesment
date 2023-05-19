@@ -15,7 +15,12 @@ import spacy
 
 def count_pos_tags(text):
     # load the pre-trained English model (en_core_web_sm) and process the text using the nlp object.
-    nlp = spacy.load('en_core_web_sm')
+    try:
+        nlp = spacy.load("en_core_web_sm")
+    except OSError:
+        print("Downloading 'en_core_web_sm' model...")
+        spacy.cli.download("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
     
     pos_counts = {
