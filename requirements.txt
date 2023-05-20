@@ -1,0 +1,12 @@
+pandas
+requests
+openpyxl
+beautifulsoup4
+matplotlib
+scipy
+seaborn
+spacy
+nltk
+gensim
+scikit-learn
+statsmodels
