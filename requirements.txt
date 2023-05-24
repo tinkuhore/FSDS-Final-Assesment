@@ -10,3 +10,4 @@ nltk
 gensim
 scikit-learn
 statsmodels
+ipykernel
