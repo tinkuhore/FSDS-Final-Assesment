@@ -11,3 +11,9 @@ gensim
 scikit-learn
 statsmodels
 ipykernel
+yellowbrick
+data-science-utils
+pacmap
+folium
+plotly
+nbformat
