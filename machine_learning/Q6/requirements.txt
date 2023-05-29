@@ -1,0 +1,15 @@
+pandas
+requests
+matplotlib
+scipy
+seaborn
+scikit-learn
+# statsmodels
+# ipykernel
+# yellowbrick
+# data-science-utils
+# pacmap
+# folium
+# plotly
+# nbformat
+flask
