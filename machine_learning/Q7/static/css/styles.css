@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input[type="file"] {
+    margin-top: 20px;
+  }
+  
+  #predict-button {
+    margin-top: 10px;
+  }
+  
+  #prediction-container {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  

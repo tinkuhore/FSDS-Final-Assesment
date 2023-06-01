@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Genre Prediction</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Music Genre Prediction</h1>
+  <form action="/predict" method="post" enctype="multipart/form-data">
+    <input type="file" name="audio" id="audio-file">
+    <button type="submit">Predict</button>
+  </form>
+  <div id="prediction-container">
+    {% if predictions %}
+      <h2>Predictions:</h2>
+      <ul>
+        {% for prediction in predictions %}
+          <li>{{ prediction }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</body>
+</html>
