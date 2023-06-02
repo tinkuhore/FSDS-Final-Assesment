@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question Similarity Checker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Question Similarity Checker</h1>
+        <form action="/predict" method="post">
+            <div class="input-group">
+                <label>Question 1:</label>
+                <input type="text" name="question1" placeholder="Enter question 1">
+            </div>
+            <div class="input-group">
+                <label>Question 2:</label>
+                <input type="text" name="question2" placeholder="Enter question 2">
+            </div>
+            <button class="btn-submit" type="submit">Check Similarity</button>
+        </form>
+        <div class="result">
+            <h2>Result</h2>
+            <p class="accuracy">Accuracy: {{ accuracy }}%</p>
+            <p class="prediction">Similarity: {{ prediction }}</p>
+        </div>
+    </div>
+</body>
+</html>
